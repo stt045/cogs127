@@ -3,7 +3,7 @@ const uberStudy = {
   background: {
     "objective": "Facilitate stronger in-vehicle communication between riders and drivers for ridesharing applications like Uber.",
     "targetUser": "Our target users are Uber riders who don’t speak the same native language as the Uber driver.",
-    "prevalence": ""
+    prevalence: "Based off of Uber and Lyft’s own reports, only 37% of drivers are white, 18% are African American, and 16% are Hispanic. That also implies that the remaining 31% are of some other ethnicity (Asian, Middle Eastern, etc.). If we assume that white and African American drivers are most likely fluent in english, that would mean 45% of drivers may not be. Although there isn’t as much data on riders, we can also assume that even if most speak English, there are still those who do not. And based on some initial surveys we sent out, over 40% of riders said they have had at least one ride with a stranger who was not fluent in English thus we can safely assume that approximately half of all Uber rides may have some sort of language barrier. Even if riders/drivers with physical handicaps are only a slim minority, that only worsens the already 50% case we have."
   },
   research: {
     goals: [

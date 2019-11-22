@@ -60,7 +60,7 @@ class Uber extends Component {
             <h3>Target User</h3>
             <p>{uberStudy.background.targetUser}</p>
             <h3>Prevalence</h3>
-            <p>{uberStudy.background.prevalance}</p>
+            <p>{uberStudy.background.prevalence}</p>
           </div>
         </div>
         <div>
