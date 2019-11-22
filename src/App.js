@@ -13,19 +13,22 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/Uber">
-            <Uber />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    // <Router>
+    //   <div className="App">
+    //     <Header />
+    //     <Switch>
+    //       <Route exact path="/">
+    //         <Home />
+    //       </Route>
+    //       <Route path="/Uber">
+    //         <Uber />
+    //       </Route>
+    //     </Switch>
+    //   </div>
+    // </Router>
+    <div>
+      <Uber />
+    </div>
   );
 }
 
