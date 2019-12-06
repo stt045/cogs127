@@ -16,22 +16,22 @@ class Uber extends Component {
     );
   };
 
-  renderFindings = () => {
-    const { research: { findings: { statistics } } } = uberStudy;
-    return (
-      <ul>
-        {statistics.map((stat, index) => <li key={index}>{stat}</li>)}
-      </ul>
-    );
-  };
-
   renderPersonas = () => {
-    const { research: { personas } } = uberStudy;
-    // TODO: render the images
     return (
-      <ul>
-        {personas.map((person, index) => <li key={index}>{person}</li>)}
-      </ul>
+      <>
+        <img
+          style={{ width: "33%" }}
+          src={uberStudy.bryant}
+        />
+        <img
+          style={{ width: "33%" }}
+          src={uberStudy.mona}
+        />
+        <img
+          style={{ width: "33%" }}
+          src={uberStudy.jerry}
+        />
+      </>
     );
   };
 
@@ -47,7 +47,19 @@ class Uber extends Component {
   render () {
     return (
       <div style={s.root}>
-        <h1>Uber Case Study</h1>
+        <div
+          style={{
+            margin: "0 -15%"
+          }}
+        >
+          <img
+            style={{
+              position: "absolute top left",
+              width: "100%",
+            }}
+            src={uberStudy.header}
+          />
+        </div>
         <div>
           <h2>Overview</h2>
           <p>{uberStudy.overview}</p>
@@ -70,8 +82,10 @@ class Uber extends Component {
             {this.renderGoals()}
             <h3>Methods</h3>
             <p>{uberStudy.research.methods}</p>
-            <h3>Findings</h3>
-            {this.renderFindings()}
+            <img
+              style={{ width: "40%" }}
+              src={uberStudy.research.findings}
+            />
           </div>
         </div>
         <div>
@@ -80,6 +94,17 @@ class Uber extends Component {
         </div>
         <div>
           <h2>Competitive Analysis</h2>
+          <img
+            style={{
+              width: "33.5%",
+              marginRight: "10px"
+            }}
+            src={uberStudy.compChart}
+          />
+          <img
+            style={{ width: "65%" }}
+            src={uberStudy.wazeComp}
+          />
           <p>{uberStudy.competitiveAnalysis}</p>
         </div>
         <div>
@@ -87,27 +112,71 @@ class Uber extends Component {
           <p>{uberStudy.UXFlows.overview}</p>
           <div>
             <h3>UX Flow 1</h3>
+            <img
+              style={{ width: "80%", margin: 10 }}
+              src={uberStudy.UXFlows.one.driverImage}
+            />
+            <img
+              style={{ width: "80%", margin: 10 }}
+              src={uberStudy.UXFlows.one.riderImage}
+            />
             <p>{uberStudy.UXFlows.one.description}</p>
           </div>
           <div>
             <h3>UX Flow 2</h3>
+            <img
+              style={{ width: "80%" }}
+              src={uberStudy.UXFlows.two.image}
+            />
             <p>{uberStudy.UXFlows.two.description}</p>
           </div>
         </div>
         <div>
           <h2>UI Sketches</h2>
-          <p>{uberStudy.UISketches.overview}</p>
+          <img
+            style={{ width: "50%", display: "inline-block" }}
+            src={uberStudy.UISketches.image}
+          />
+          <p
+            style={{
+              display: "inline-block",
+              verticalAlign: "top",
+              width: "34%",
+              marginLeft: "5vw"
+            }}
+          >
+            {uberStudy.UISketches.overview}
+          </p>
         </div>
         <div>
           <h2>Paper Prototypes</h2>
           <div>
             <p>{uberStudy.paperPrototypes.overview}</p>
-            <div>
-              <h3>Prototype 1</h3>
+            <div
+              style={{
+                width: "47%",
+                display: "inline-block",
+                marginRight: 10,
+                marginTop: 20
+              }}
+            >
+              <img
+                style={{ width: "100%" }}
+                src={uberStudy.paperPrototypes.one.image}
+              />
               <p>{uberStudy.paperPrototypes.one.description}</p>
             </div>
-            <div>
-              <h3>Prototype 2</h3>
+            <div
+              style={{
+                width: "47%",
+                display: "inline-block",
+                marginLeft: 10
+              }}
+            >
+              <img
+                style={{ width: "100%" }}
+                src={uberStudy.paperPrototypes.two.image}
+              />
               <p>{uberStudy.paperPrototypes.two.description}</p>
             </div>
             <div>
@@ -116,10 +185,19 @@ class Uber extends Component {
               <p>{uberStudy.paperPrototypes.userTesting.participants}</p>
               <h4>Tasks</h4>
               {this.renderTasks()}
+              <img
+                style={{
+                  width: "50%",
+                  display: "block",
+                  marginLeft: "auto",
+                  marginRight: "auto"
+                }}
+                src={uberStudy.paperPrototypes.userTesting.image}
+              />
               <h4>Results</h4>
               <p>{uberStudy.paperPrototypes.userTesting.results}</p>
               <h4>Point of View and Next Steps</h4>
-              <p>{uberStudy.paperPrototypes.userTesting.pov.next}</p>
+              {/* <p>{uberStudy.paperPrototypes.userTesting.pov.next}</p> */}
               <p>
                 Based off of our user testing results we were glad to see that people felt that this feature would actually improve the experience for many other users on the platform. We received a lot of confirmation on good ideas we had, but also saw how we had a lot of holes in the design. We feel like we were much too focused on communication via voice but failed to realize that riders have a preference for texting, especially if they have a language barrier. We think that although we had solid ideas for both prototypes, they were missing a bit from each other that would have refined them more.
                 <br /> <br />
@@ -136,10 +214,26 @@ class Uber extends Component {
         <div>
           <h2>Hi-Fi Prototypes</h2>
           <p>{uberStudy.hifiPrototypes}</p>
+          <img
+            style={{ width: "100%" }}
+            src={uberStudy.hifiOne}
+          />
+          <img
+            style={{ width: "100%" }}
+            src={uberStudy.hifiTwo}
+          />
         </div>
         <div>
           <h2>Refining Hi-Fi Prototypes</h2>
           <p>{uberStudy.refiningPrototypes}</p>
+          <img
+            style={{ width: "100%" }}
+            src={uberStudy.messageHifi}
+          />
+          <img
+            style={{ width: "100%" }}
+            src={uberStudy.chatHifi}
+          />
         </div>
         <div>
           <h2>Reflection</h2>
@@ -152,7 +246,13 @@ class Uber extends Component {
 
 const s = {
   root: {
-    margin: "0 15%"
+    margin: "0 15%",
+    marginBottom: "4%"
+  },
+  center: {
+    display: "block",
+    marginLeft: "auto",
+    marginRight: "auto"
   }
 };
 
